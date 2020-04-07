@@ -8,7 +8,7 @@ import (
 	"sync"
 
 	"github.com/missinglink/gosmparse"
-	"github.com/danhquyen0109/pelias_pbf/lib"
+	"github.com/missinglink/pbf/lib"
 )
 
 // CachedRandomAccessParser - struct to handle random access lookups to a pbf

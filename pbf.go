@@ -4,7 +4,7 @@ import (
 	"os"
 
 	"github.com/codegangsta/cli"
-	"github.com/danhquyen0109/pelias_pbf/command"
+	"github.com/missinglink/pbf/command"
 )
 
 func main() {

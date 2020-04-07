@@ -5,9 +5,9 @@ package command
 // 	"encoding/json"
 // 	"fmt"
 // 	"log"
-// 	"github.com/danhquyen0109/pelias_pbf/handler"
-// 	"github.com/danhquyen0109/pelias_pbf/lib"
-// 	"github.com/danhquyen0109/pelias_pbf/proxy"
+// 	"github.com/missinglink/pbf/handler"
+// 	"github.com/missinglink/pbf/lib"
+// 	"github.com/missinglink/pbf/proxy"
 //
 // 	"github.com/codegangsta/cli"
 // 	geojson "github.com/paulmach/go.geojson"

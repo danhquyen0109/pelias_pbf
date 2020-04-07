@@ -3,8 +3,8 @@ package lib
 import (
 	"bytes"
 	"log"
-	"github.com/danhquyen0109/pelias_pbf/json"
-	"github.com/danhquyen0109/pelias_pbf/leveldb"
+	"github.com/missinglink/pbf/json"
+	"github.com/missinglink/pbf/leveldb"
 	"sync"
 
 	"github.com/missinglink/gosmparse"

@@ -9,13 +9,13 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/danhquyen0109/pelias_pbf/sqlite"
+	"github.com/missinglink/pbf/sqlite"
 
-	"github.com/danhquyen0109/pelias_pbf/handler"
-	"github.com/danhquyen0109/pelias_pbf/lib"
-	"github.com/danhquyen0109/pelias_pbf/parser"
-	"github.com/danhquyen0109/pelias_pbf/proxy"
-	"github.com/danhquyen0109/pelias_pbf/tags"
+	"github.com/missinglink/pbf/handler"
+	"github.com/missinglink/pbf/lib"
+	"github.com/missinglink/pbf/parser"
+	"github.com/missinglink/pbf/proxy"
+	"github.com/missinglink/pbf/tags"
 
 	"github.com/codegangsta/cli"
 	geo "github.com/paulmach/go.geo"
@@ -145,7 +145,6 @@ func joinStreets(streets []*street) []*street {
 
 	// points do not have to be exact matches
 	var distanceTolerance = 0.0005 // roughly 55 meters
-	// var distanceTolerance = 0.0
 
 	var reversePath = func(path *geo.Path) {
 		for i := path.PointSet.Length()/2 - 1; i >= 0; i-- {
@@ -185,8 +184,7 @@ func joinStreets(streets []*street) []*street {
 					i--
 					break
 
-				} 
-				else if str1.Path.First().DistanceFrom(str2.Path.Last()) < distanceTolerance {
+				} else if str1.Path.First().DistanceFrom(str2.Path.Last()) < distanceTolerance {
 
 					var match = str1.Path.First()
 

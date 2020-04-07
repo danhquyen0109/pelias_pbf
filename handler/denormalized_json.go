@@ -4,10 +4,10 @@ import (
 	"log"
 
 	"github.com/missinglink/gosmparse"
-	"github.com/danhquyen0109/pelias_pbf/json"
-	"github.com/danhquyen0109/pelias_pbf/leveldb"
-	"github.com/danhquyen0109/pelias_pbf/lib"
-	"github.com/danhquyen0109/pelias_pbf/tags"
+	"github.com/missinglink/pbf/json"
+	"github.com/missinglink/pbf/leveldb"
+	"github.com/missinglink/pbf/lib"
+	"github.com/missinglink/pbf/tags"
 	"github.com/mmcloughlin/geohash"
 )
 

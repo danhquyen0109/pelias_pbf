@@ -9,7 +9,7 @@ import (
 	"sync"
 
 	"github.com/missinglink/gosmparse"
-	"github.com/danhquyen0109/pelias_pbf/tags"
+	"github.com/missinglink/pbf/tags"
 )
 
 // Cypher - Cypher

@@ -10,10 +10,10 @@ import (
 	"sync"
 
 	"github.com/missinglink/gosmparse"
-	"github.com/danhquyen0109/pelias_pbf/handler"
-	"github.com/danhquyen0109/pelias_pbf/lib"
-	"github.com/danhquyen0109/pelias_pbf/parser"
-	"github.com/danhquyen0109/pelias_pbf/tags"
+	"github.com/missinglink/pbf/handler"
+	"github.com/missinglink/pbf/lib"
+	"github.com/missinglink/pbf/parser"
+	"github.com/missinglink/pbf/tags"
 
 	"github.com/codegangsta/cli"
 )

@@ -3,8 +3,8 @@ package handler
 import (
 	"log"
 
-	"github.com/danhquyen0109/pelias_pbf/leveldb"
-	"github.com/danhquyen0109/pelias_pbf/tags"
+	"github.com/missinglink/pbf/leveldb"
+	"github.com/missinglink/pbf/tags"
 
 	"github.com/missinglink/gosmparse"
 )
