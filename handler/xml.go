@@ -7,8 +7,8 @@ import (
 	"sync"
 
 	"github.com/missinglink/gosmparse"
-	"github.com/missinglink/pbf/lib"
-	"github.com/missinglink/pbf/tags"
+	"github.com/danhquyen0109/pelias_pbf/lib"
+	"github.com/danhquyen0109/pelias_pbf/tags"
 )
 
 // XML - XML

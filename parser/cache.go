@@ -6,7 +6,7 @@ import (
 	"sync"
 
 	"github.com/missinglink/gosmparse"
-	"github.com/missinglink/pbf/lib"
+	"github.com/danhquyen0109/pelias_pbf/lib"
 )
 
 // CoordCache - in-memory element cache

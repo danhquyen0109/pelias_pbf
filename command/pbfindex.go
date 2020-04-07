@@ -7,8 +7,8 @@ import (
 	"path/filepath"
 
 	"github.com/missinglink/gosmparse"
-	"github.com/missinglink/pbf/handler"
-	"github.com/missinglink/pbf/parser"
+	"github.com/danhquyen0109/pelias_pbf/handler"
+	"github.com/danhquyen0109/pelias_pbf/parser"
 
 	"github.com/codegangsta/cli"
 )

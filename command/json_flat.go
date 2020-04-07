@@ -4,11 +4,11 @@ import (
 	"log"
 	"os"
 
-	"github.com/missinglink/pbf/handler"
-	"github.com/missinglink/pbf/leveldb"
-	"github.com/missinglink/pbf/lib"
-	"github.com/missinglink/pbf/parser"
-	"github.com/missinglink/pbf/proxy"
+	"github.com/danhquyen0109/pelias_pbf/handler"
+	"github.com/danhquyen0109/pelias_pbf/leveldb"
+	"github.com/danhquyen0109/pelias_pbf/lib"
+	"github.com/danhquyen0109/pelias_pbf/parser"
+	"github.com/danhquyen0109/pelias_pbf/proxy"
 
 	"github.com/codegangsta/cli"
 )

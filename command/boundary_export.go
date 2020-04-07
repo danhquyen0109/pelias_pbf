@@ -9,8 +9,8 @@ import (
 	"runtime"
 	"sync"
 
-	"github.com/missinglink/pbf/leveldb"
-	"github.com/missinglink/pbf/lib"
+	"github.com/danhquyen0109/pelias_pbf/leveldb"
+	"github.com/danhquyen0109/pelias_pbf/lib"
 
 	"github.com/codegangsta/cli"
 	"github.com/missinglink/gosmparse"
@@ -55,9 +55,9 @@ func BoundaryExporter(c *cli.Context) error {
 		// increase v8 max memory limit to 8GB for json over 100MB
 		// see: https://github.com/tyrasd/osmtogeojson#usage
 		if len(json.Bytes()) > 104857600 /*(100 * 1024 * 1024)*/ {
-			child = exec.Command("/usr/local/bin/node", "--max_old_space_size=8192", "/home/peter/.go/src/github.com/missinglink/pbf/nodejs/osmtogeojson.js")
+			child = exec.Command("/usr/local/bin/node", "--max_old_space_size=8192", "/home/peter/.go/src/github.com/danhquyen0109/pelias_pbf/nodejs/osmtogeojson.js")
 		} else {
-			child = exec.Command("/usr/local/bin/node", "/home/peter/.go/src/github.com/missinglink/pbf/nodejs/osmtogeojson.js")
+			child = exec.Command("/usr/local/bin/node", "/home/peter/.go/src/github.com/danhquyen0109/pelias_pbf/nodejs/osmtogeojson.js")
 		}
 
 		// stdio

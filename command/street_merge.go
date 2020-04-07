@@ -9,13 +9,13 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/missinglink/pbf/sqlite"
+	"github.com/danhquyen0109/pelias_pbf/sqlite"
 
-	"github.com/missinglink/pbf/handler"
-	"github.com/missinglink/pbf/lib"
-	"github.com/missinglink/pbf/parser"
-	"github.com/missinglink/pbf/proxy"
-	"github.com/missinglink/pbf/tags"
+	"github.com/danhquyen0109/pelias_pbf/handler"
+	"github.com/danhquyen0109/pelias_pbf/lib"
+	"github.com/danhquyen0109/pelias_pbf/parser"
+	"github.com/danhquyen0109/pelias_pbf/proxy"
+	"github.com/danhquyen0109/pelias_pbf/tags"
 
 	"github.com/codegangsta/cli"
 	geo "github.com/paulmach/go.geo"

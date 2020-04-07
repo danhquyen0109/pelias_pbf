@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"github.com/missinglink/gosmparse"
-	tagutils "github.com/missinglink/pbf/tags"
+	tagutils "github.com/danhquyen0109/pelias_pbf/tags"
 )
 
 // Config - struct representing the config file format

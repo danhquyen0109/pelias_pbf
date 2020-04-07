@@ -1,9 +1,9 @@
 package handler
 
 import (
-	"github.com/missinglink/pbf/json"
-	"github.com/missinglink/pbf/lib"
-	"github.com/missinglink/pbf/tags"
+	"github.com/danhquyen0109/pelias_pbf/json"
+	"github.com/danhquyen0109/pelias_pbf/lib"
+	"github.com/danhquyen0109/pelias_pbf/tags"
 
 	"github.com/missinglink/gosmparse"
 )

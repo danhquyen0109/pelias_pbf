@@ -3,8 +3,8 @@ package handler
 import (
 	"log"
 
-	"github.com/missinglink/pbf/sqlite"
-	"github.com/missinglink/pbf/tags"
+	"github.com/danhquyen0109/pelias_pbf/sqlite"
+	"github.com/danhquyen0109/pelias_pbf/tags"
 
 	"github.com/missinglink/gosmparse"
 )
