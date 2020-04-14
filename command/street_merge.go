@@ -144,14 +144,14 @@ func joinStreets(streets []*street) []*street {
 	}
 
 	// points do not have to be exact matches
-	var distanceTolerance = 0.0005 // roughly 55 meters
+	// var distanceTolerance = 0.0005 // roughly 55 meters
 
-	var reversePath = func(path *geo.Path) {
-		for i := path.PointSet.Length()/2 - 1; i >= 0; i-- {
-			opp := path.PointSet.Length() - 1 - i
-			path.PointSet[i], path.PointSet[opp] = path.PointSet[opp], path.PointSet[i]
-		}
-	}
+	// var reversePath = func(path *geo.Path) {
+	// 	for i := path.PointSet.Length()/2 - 1; i >= 0; i-- {
+	// 		opp := path.PointSet.Length() - 1 - i
+	// 		path.PointSet[i], path.PointSet[opp] = path.PointSet[opp], path.PointSet[i]
+	// 	}
+	// }
 
 	for _, strs := range nameMap {
 		for i := 0; i < len(strs); i++ {
@@ -167,9 +167,7 @@ func joinStreets(streets []*street) []*street {
 				if _, ok := merged[str2]; ok {
 					continue
 				}
-
-				if str1.Path.Last().DistanceFrom(str2.Path.First()) < distanceTolerance {
-
+				if str1.Path.Last().DistanceFrom(str2.Path.First()) == 0 {
 					var match = str1.Path.Last()
 
 					// merge str2 in to str1
@@ -179,80 +177,81 @@ func joinStreets(streets []*street) []*street {
 						}
 						str1.Path.Push(&point)
 					}
-
-					merged[str2] = true
-					i--
-					break
-
-				} else if str1.Path.First().DistanceFrom(str2.Path.Last()) < distanceTolerance {
-
-					var match = str1.Path.First()
-
-					// flip str1 & str2 points
-					reversePath(str1.Path)
-					reversePath(str2.Path)
-
-					// merge str2 in to str1
-					for _, point := range str2.Path.PointSet {
-						if point.Equals(match) {
-							continue
-						}
-						str1.Path.Push(&point)
-					}
-
-					// flip str1 points back
-					reversePath(str1.Path)
-					reversePath(str2.Path)
-
-					merged[str2] = true
-					i--
-					break
-
-				} else if str1.Path.Last().DistanceFrom(str2.Path.Last()) < distanceTolerance {
-
-					var match = str1.Path.Last()
-
-					// flip str2 points
-					reversePath(str2.Path)
-
-					// merge str2 in to str1
-					for _, point := range str2.Path.PointSet {
-						if point.Equals(match) {
-							continue
-						}
-						str1.Path.Push(&point)
-					}
-
-					// flip str2 points back
-					reversePath(str2.Path)
-
-					merged[str2] = true
-					i--
-					break
-
-				} else if str1.Path.First().DistanceFrom(str2.Path.First()) < distanceTolerance {
-
-					var match = str1.Path.First()
-
-					// flip str1 points
-					reversePath(str1.Path)
-
-					// merge str2 in to str1
-					for _, point := range str2.Path.PointSet {
-						if point.Equals(match) {
-							continue
-						}
-						str1.Path.Push(&point)
-					}
-
-					// flip str1 points back
-					reversePath(str1.Path)
 
 					merged[str2] = true
 					i--
 					break
 
 				}
+				// else if str1.Path.First().DistanceFrom(str2.Path.Last()) < distanceTolerance {
+
+				// 	var match = str1.Path.First()
+
+				// 	// flip str1 & str2 points
+				// 	reversePath(str1.Path)
+				// 	reversePath(str2.Path)
+
+				// 	// merge str2 in to str1
+				// 	for _, point := range str2.Path.PointSet {
+				// 		if point.Equals(match) {
+				// 			continue
+				// 		}
+				// 		str1.Path.Push(&point)
+				// 	}
+
+				// 	// flip str1 points back
+				// 	reversePath(str1.Path)
+				// 	reversePath(str2.Path)
+
+				// 	merged[str2] = true
+				// 	i--
+				// 	break
+
+				// } else if str1.Path.Last().DistanceFrom(str2.Path.Last()) < distanceTolerance {
+
+				// 	var match = str1.Path.Last()
+
+				// 	// flip str2 points
+				// 	reversePath(str2.Path)
+
+				// 	// merge str2 in to str1
+				// 	for _, point := range str2.Path.PointSet {
+				// 		if point.Equals(match) {
+				// 			continue
+				// 		}
+				// 		str1.Path.Push(&point)
+				// 	}
+
+				// 	// flip str2 points back
+				// 	reversePath(str2.Path)
+
+				// 	merged[str2] = true
+				// 	i--
+				// 	break
+
+				// } else if str1.Path.First().DistanceFrom(str2.Path.First()) < distanceTolerance {
+
+				// 	var match = str1.Path.First()
+
+				// 	// flip str1 points
+				// 	reversePath(str1.Path)
+
+				// 	// merge str2 in to str1
+				// 	for _, point := range str2.Path.PointSet {
+				// 		if point.Equals(match) {
+				// 			continue
+				// 		}
+				// 		str1.Path.Push(&point)
+				// 	}
+
+				// 	// flip str1 points back
+				// 	reversePath(str1.Path)
+
+				// 	merged[str2] = true
+				// 	i--
+				// 	break
+
+				// }
 			}
 		}
 	}
